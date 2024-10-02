@@ -22,10 +22,13 @@ public class ejercicios {
 		        nombre.pedir();
 	        	break;
 	        case 4:
+	        	calculadora jano = new calculadora();
+		        jano.calcular();
 	        	break;
 	        case 5:
+	        	ejemplo palabra = new ejemplo();
+	            palabra.ejemplofor();
 	        	break;
-	        
 	        }
 		 
 		 
@@ -97,19 +100,42 @@ class calculadora{
 	public void calcular(){
 		System.out.println("Escriba la operacion que desea realizar entre:\n+\n-\n/\n*");
 		 Scanner scanner = new Scanner(System.in);
-		 int operacion = scanner.next().charAt(0);
-		 switch(operacion) {
+		 char operacion = scanner.next().charAt(0);
+         System.out.println("Escriba x1:");
+         double num1 = scanner.nextDouble();
+         System.out.println("Ahora escriba x2:");
+         double num2 = scanner.nextDouble();
+		 System.out.print("El resultado de "+ num1 + operacion + num2 + " es:");
+    	 switch(operacion) {
 	     	 case '+':
+	     		 System.out.println(num1 + num2);
 	     		 break;
 	     	 case '-':
+	     		 System.out.println(num1 - num2);
 	     		 break;
 	         case '/':
+	     		 System.out.println(num1 / num2);
 	     		 break;
 	       	 case '*':
+	     		 System.out.println(num1 * num2);
 	     		 break;
+	       	 default:
+	       		 System.out.println("Ingresa el operador correcto");
+	       		 break;
 		 }
 		 
 		
 	}
 	
+}
+
+class ejemplo{
+	public void ejemplofor(){
+		 int[] anios = {2002, 2003, 2004, 2005, 2006};
+
+	        // Usando for-each para recorrer el array
+	        for (int anio : anios) {
+	            System.out.println(anio);
+	        }
+	}
 }
